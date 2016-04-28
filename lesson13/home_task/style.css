@@ -1,0 +1,92 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+header
+{
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    background: #77D3DF;
+    border-bottom: 1px solid black;
+}
+
+
+header>p
+{
+    padding: 15px;
+    position: relative;
+    font: bold 30px/10px arial;
+    line-height: 18px;
+}
+
+header>time
+{
+    position: relative;
+    float: left;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+.navigation
+{
+    margin: 0;
+    padding: 10px;
+}
+
+nav
+{
+    margin: 10px 0 0 20px;
+}
+
+.navigation li
+{
+    display: inline;
+    padding: 5px;
+    margin-right: 25px;
+    border: 1px solid #515151;
+    border-radius: 3px;
+    box-shadow: 2px 2px 0 #B1B1B1;
+
+}
+
+.navigation li a
+{
+    text-decoration: none;
+    color: black;
+}
+
+h2
+{
+    margin: 15px 0 15px 30px;
+}
+
+p {
+    text-indent: 20px;
+    margin-bottom: 10px;
+}
+
+.error
+{
+    color: red;
+}
+
+main
+{
+    margin: 15px 0 15px 30px;
+}
+
+form input
+{
+    margin-bottom: 15px;
+}
+
+#exit
+{
+  position: absolute;
+    top: 10px;
+    right: 100px;
+}

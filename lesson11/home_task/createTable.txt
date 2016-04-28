@@ -1,0 +1,130 @@
+-- phpMyAdmin SQL Dump
+-- version 3.5.1
+-- http://www.phpmyadmin.net
+--
+-- Хост: 127.0.0.1
+-- Время создания: Апр 10 2016 г., 04:12
+-- Версия сервера: 5.5.25
+-- Версия PHP: 5.3.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- База данных: `test_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `questions`
+--
+
+CREATE TABLE IF NOT EXISTS `questions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `question` varchar(100) DEFAULT NULL,
+  `tru_id_v` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Дамп данных таблицы `questions`
+--
+
+INSERT INTO `questions` (`id`, `question`, `tru_id_v`) VALUES
+(0, 'Чи є життя на Марсі?', 1),
+(1, 'Скільки буде 4*4-17*8+100?', 5),
+(2, 'Скільки гномів було у казці "Білосніжка"?', 9),
+(3, 'Що таке квантова фізика?', 13),
+(4, 'Що треба зробити, щоб виспатись?', 17);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `result`
+--
+
+CREATE TABLE IF NOT EXISTS `result` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `true_answer` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=203 ;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `sample_table`
+--
+
+CREATE TABLE IF NOT EXISTS `sample_table` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(40) DEFAULT NULL,
+  `lastname` varchar(40) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `city` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=160 ;
+
+--
+-- Дамп данных таблицы `sample_table`
+--
+
+INSERT INTO `sample_table` (`id`, `firstname`, `lastname`, `age`, `city`) VALUES
+(151, 'Іван', 'Іванов', 12, 'Луцьк'),
+(152, 'Іван1', 'Іванов', 12, 'Луцьк'),
+(153, 'Іван2', 'Іванов', 12, 'Луцьк'),
+(154, 'Іван', 'Іванов', 12, 'Луцьк'),
+(155, 'Іван1', 'Іванов', 12, 'Луцьк'),
+(156, 'Іван2', 'Іванов', 12, 'Луцьк'),
+(157, 'Іван', 'Іванов', 12, 'Луцьк'),
+(158, 'Іван1', 'Іванов', 12, 'Луцьк'),
+(159, 'Іван2', 'Іванов', 12, 'Луцьк');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `variant`
+--
+
+CREATE TABLE IF NOT EXISTS `variant` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `id_question` int(11) DEFAULT NULL,
+  `answer` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+
+--
+-- Дамп данных таблицы `variant`
+--
+
+INSERT INTO `variant` (`id`, `id_question`, `answer`) VALUES
+(1, 0, 'Є'),
+(2, 0, 'Немає'),
+(3, 0, 'Незнаю'),
+(4, 0, 'Наступне запитання :)'),
+(5, 1, '-20'),
+(6, 1, '31'),
+(7, 1, '15'),
+(8, 1, 'Я гуманітарій :)'),
+(9, 2, 'Семеро'),
+(10, 2, 'Гномів чи низькорослих?'),
+(11, 2, 'Шестеро'),
+(12, 2, 'Запитайте в неї'),
+(13, 3, 'Розділ теоретичної фізики'),
+(14, 3, 'Книжка в бібліотеці'),
+(15, 3, 'Незнаю'),
+(16, 3, 'Я гуманітарій :)'),
+(17, 4, 'Лягти спати'),
+(18, 4, 'Подивитись фільм'),
+(19, 4, 'Подивитись мультик'),
+(20, 4, 'Місія не має шансів на успіх :)');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
